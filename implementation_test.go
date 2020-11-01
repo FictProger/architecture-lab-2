@@ -34,7 +34,7 @@ func (s *S) TestPostfixToInfix(c *C) {
 	c.Assert(err.Error(), Equals, "unexpected behaviour")
 }
 
-//ExamplePostfixToInfix shows how to use this implementation
+// ExamplePostfixToInfix shows how to use this implementation
 func ExamplePostfixToInfix() {
 	res, err := PostfixToInfix("4 2 - 3 * 5 +")
 	if err != nil {
