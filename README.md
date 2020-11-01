@@ -1,5 +1,5 @@
-# [Passed Github Actions]()
+# [Passed Github Actions](https://www.google.com.ua/)
 
-[Failed Github Actions]()
+[Failed Github Actions](https://www.google.com.ua/)
 
-[Pull request Github Actions]()
+[Pull request Github Actions](https://www.google.com.ua/)
