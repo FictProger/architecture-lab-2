@@ -2,7 +2,7 @@ package lab2
 
 import "fmt"
 
-func get_word(str string, c chan string) {
+func getWord(str string, c chan string) {
 	word := ""
 	for i := 0; i < len(str); i++ {
 		if str[i] == ' ' {
@@ -37,11 +37,10 @@ func isOperandToFrameExpression(str string) bool {
 	return strInRange(str, operands)
 }
 
-// TODO: document this function.
-// PostfixToInfix converts
+// PostfixToInfix converts from postfix look to infix
 func PostfixToInfix(input string) (string, error) {
 	c := make(chan string)
-	go get_word(input, c)
+	go getWord(input, c)
 	expression := [2]string{"", ""}
 	for i := range c {
 		if isOperand(i) {
