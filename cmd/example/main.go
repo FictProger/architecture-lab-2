@@ -1,7 +1,7 @@
 package main
 
 import (
-	//"flag"
+	// "flag"
 
 	"fmt"
 
@@ -9,12 +9,12 @@ import (
 )
 
 var (
-//inputExpression = flag.String("e", "", "Expression to compute")
+// inputExpression = flag.String("e", "", "Expression to compute")
 // TODO: Add other flags support for input and output configuration.
 )
 
 func main() {
-	//flag.Parse()
+	// flag.Parse()
 
 	// TODO: Change this to accept input from the command line arguments as described in the task and
 	//       output the results using the ComputeHandler instance.
