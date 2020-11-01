@@ -24,8 +24,8 @@ func main() {
 		from io.Reader
 		to io.Writer
 		err error
-	)
 	
+	)
 	if *inputExpression != "" {
 		from = strings.NewReader(*inputExpression)
 	} else if *readFile != "" {
@@ -56,7 +56,5 @@ func main() {
 	if err := handler.Compute(); err != nil {
 		os.Stderr.WriteString(err.Error())
 	}
-}
 
-	// res, _ := lab2.PostfixToInfix(" 4 2 -")
-	// fmt.Println(res)
+}
