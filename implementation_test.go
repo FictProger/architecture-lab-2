@@ -37,7 +37,7 @@ func (s *S) TestPostfixToInfix(c *C) {
 //ExamplePostfixToInfix shows how to use this implementation
 func ExamplePostfixToInfix() {
 	res, err := PostfixToInfix("4 2 - 3 * 5 +")
-	if !err {
+	if err != nil {
 		fmt.Println(res)
 	}
 	// Output:
