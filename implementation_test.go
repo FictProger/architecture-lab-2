@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"testing"
 
+	. "github.com/FictProger/architecture-lab-2"
 	. "gopkg.in/check.v1"
 )
 
