@@ -15,16 +15,16 @@ type S struct{}
 var _ = Suite(&S{})
 
 func (s *S) TestPostfixToInfix(c *C) {
-	res, _ := PostfixToInfix("4 2 - 3 * 5 +")
+	res, err := PostfixToInfix("4 2 - 3 * 5 +")
 	c.Assert(res, Equals, "(4 - 2) * 3 + 5")
 
-	res, _ = PostfixToInfix("2 2 + 1 -")
+	res, err = PostfixToInfix("2 2 + 1 -")
 	c.Assert(res, Equals, "2 + 2 - 1")
 
-	res, _ = PostfixToInfix("7 4 ^ 2 - 9 * 0")
+	res, err = PostfixToInfix("7 4 ^ 2 - 9 * 0")
 	c.Assert(res, Equals, "((7) ^ 4 - 2) * 9")
 
-	_, err := PostfixToInfix("")
+	_, err = PostfixToInfix("")
 	c.Assert(err, IsNil)
 
 	_, err = PostfixToInfix("4 4 %")
