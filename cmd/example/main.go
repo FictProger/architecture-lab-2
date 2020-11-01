@@ -1,6 +1,6 @@
 package main
 
-import (	
+import (
 	"flag"
 	"io"
 	"io/ioutil"
@@ -25,20 +25,23 @@ func main() {
 		err error
 	
 	)
-	if *inputExpression != "" {
+
+	switch {
+	case *inputExpression != "":
 		from = strings.NewReader(*inputExpression)
-	} else if *readFile != "" {
+		break
+	case *readFile != "":
 		data, err := ioutil.ReadFile(*readFile)
 		if err != nil {
 			os.Stderr.WriteString("cant find the file")
 			return
 		}
 		from = strings.NewReader(string(data))
-	} else {
+		break
+	default:
 		os.Stderr.WriteString("can't find the expression")
 		return
 	}
-
 	
 	if *writeFile != "" {
 		if to, err = os.Create(*writeFile); err != nil {
