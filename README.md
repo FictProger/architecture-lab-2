@@ -1,4 +1,5 @@
-# Шаблон для 2-гої роботи з архітектури ПЗ
----
+# [Passed Github Actions]()
 
-Використайте кнопку **"Use this template"**, щоб створити власний репозиторій.
+[Failed Github Actions]()
+
+[Pull request Github Actions]()
