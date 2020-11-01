@@ -1,18 +1,20 @@
 package main
 
 import (
-	"flag"
+	//	"flag"
+
 	"fmt"
-	lab2 "github.com/roman-mazur/architecture-lab-2"
+
+	lab2 "github.com/FictProger/architecture-lab-2"
 )
 
 var (
-	inputExpression = flag.String("e", "", "Expression to compute")
-	// TODO: Add other flags support for input and output configuration.
+//inputExpression = flag.String("e", "", "Expression to compute")
+// TODO: Add other flags support for input and output configuration.
 )
 
 func main() {
-	flag.Parse()
+	//flag.Parse()
 
 	// TODO: Change this to accept input from the command line arguments as described in the task and
 	//       output the results using the ComputeHandler instance.
@@ -22,6 +24,6 @@ func main() {
 	//       }
 	//       err := handler.Compute()
 
-	res, _ := lab2.PrefixToPostfix("+ 2 2")
+	res, _ := lab2.PostfixToInfix("4 2 - 3 * 5 +")
 	fmt.Println(res)
 }
