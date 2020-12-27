@@ -3,17 +3,16 @@ package lab2
 import "fmt"
 
 func getWord(str string, c chan string) {
-	word := ""
-	for i := 0; i < len(str); i++ {
+	start := 0
+	i := 0
+	for ; i < len(str); i++ {
 		if str[i] == ' ' {
-			c <- word
-			word = ""
-		} else {
-			word += string(str[i])
+			c <- string(str[start:i])
+			start = i + 1
 		}
 	}
-	if word != "" {
-		c <- word
+	if string(str[start:i]) != "" {
+		c <- str[start:i]
 	}
 	close(c)
 }

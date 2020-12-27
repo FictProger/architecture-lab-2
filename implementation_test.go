@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"testing"
 
-	. "github.com/FictProger/architecture-lab-2"
 	. "gopkg.in/check.v1"
 )
 
@@ -37,7 +36,7 @@ func (s *S) TestPostfixToInfix(c *C) {
 // ExamplePostfixToInfix shows how to use this implementation
 func ExamplePostfixToInfix() {
 	res, err := PostfixToInfix("4 2 - 3 * 5 +")
-	if err != nil {
+	if err == nil {
 		fmt.Println(res)
 	}
 	// Output:

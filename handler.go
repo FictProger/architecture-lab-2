@@ -1,7 +1,6 @@
 package lab2
 
 import (
-	"fmt"
 	"io"
 	"io/ioutil"
 )
@@ -22,7 +21,7 @@ func (ch *ComputeHandler) Compute() error {
 	if res, err := PostfixToInfix(string(expr)); err != nil {
 		return err
 	} else {
-		buf := []byte(fmt.Sprintf("%f", res))
+		buf := []byte(res)
 		if _, e := ch.Output.Write(buf); e != nil {
 			return e
 		}
